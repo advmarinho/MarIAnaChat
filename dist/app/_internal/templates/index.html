@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot MarIAna</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Histórico da conversa -->
+        <div class="history" id="history-box">
+            <h3>Histórico</h3>
+            <!-- Aqui o histórico da conversa será inserido -->
+        </div>
+
+        <!-- Área de Chat -->
+        <div class="container">
+            <h1>Chat da Igarape Digital</h1>
+            <div class="chat-box" id="chat-box">
+                <!-- As mensagens aparecerão aqui -->
+            </div>
+            <div class="input-group">
+                <input type="text" id="user-input" class="input-field" placeholder="Digite sua mensagem..." />
+                <button class="send-button" onclick="sendMessage()">Enviar</button>
+            </div>
+        </div>
+        <!-- Adicione dentro da div .container -->
+        <div id="progress-container" style="display: none;">
+            <div id="progress-bar"></div>
+        </div>
+
+    </div>  
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+
+</html>
